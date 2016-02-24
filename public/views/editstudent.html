@@ -1,0 +1,120 @@
+<div class="jumbotron text-center">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even){background-color: #f2f2f2}
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+        .button:hover {background-color: #3e8e41}
+
+        .button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+        .textbox {
+            border: 1px solid #848484;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            border-radius: 30px;
+            outline:0;
+            height:25px;
+            width: 275px;
+            padding-left:10px;
+            padding-right:10px;
+        }
+
+    </style>
+
+    <div >
+
+    <form name="editform">
+        <table>
+            <tr>
+                <td>
+                    <h2>Edit Student</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Student ID:
+                </td>
+                <td>
+                    <input type="text" ng-model="student.id" class="textbox" required>
+                </td>
+                <td>
+                    First Name:
+                </td>
+                <td>
+                    <input type="text" ng-model="student.first_name" class="textbox" required>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    Last Name:
+                </td>
+                <td>
+                    <input type="text" ng-model="student.last_name" class="textbox" required>
+                </td>
+                <td>
+                    Email:
+                </td>
+                <td>
+                    <input type="email" ng-model="student.email" class="textbox" required>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    Address:
+                </td>
+                <td>
+                    <input type="text" ng-model="student.address" class="textbox" required>
+                </td>
+                <td>
+                    Phone:
+                </td>
+                <td>
+                    <input type="tel" ng-model="student.phone" class="textbox" required>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <button ng-click="updatestudent()" class="button" ng-disabled="editform.$invalid && editform.$dirty">Edit Student</button>
+                </td>
+
+            </tr>
+
+        </table>
+    </form>
+
+</div>
+</div>

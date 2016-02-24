@@ -1,5 +1,23 @@
-angular.module('MainCtrl', []).controller('MainController', function($scope) {
+angular.module('MainCtrl', []).controller('MainController', function($scope,$location,Main) {
 
-	$scope.tagline = 'To the moon and back!';	
+
+
+
+
+
+
+
+
+
+	$scope.createstudent = function () {
+		$location.path('/createstudent');
+	};
+
+	$scope.student_list = Main.getAllUsers();
+
+	$scope.editstudent = function (id) {
+		$location.path('/editstudent/' +id);
+	};
+
 
 });
